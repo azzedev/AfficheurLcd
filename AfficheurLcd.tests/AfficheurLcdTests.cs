@@ -73,5 +73,46 @@ namespace AfficheurLcd.tests
 
 			Assert.Equal(nombreAttendu, resultat);
 		}
+		[Fact]
+		public void AfficherNombre11()
+		{
+			var convertisseur = new ConvertisseurLcd();
+			var nombreAttendu =
+				"      " + Environment.NewLine +
+				"  |  |" + Environment.NewLine +
+				"  |  |";
+
+			var resultat = convertisseur.ConvertirEnLcd(11);
+
+			Assert.Equal(nombreAttendu, resultat);
+		}
+
+		[Fact]
+		public void AfficherNombre12()
+		{
+			var convertisseur = new ConvertisseurLcd();
+			var nombreAttendu =
+				"    _ " + Environment.NewLine +
+				"  | _|" + Environment.NewLine +
+				"  ||_ ";
+
+			var resultat = convertisseur.ConvertirEnLcd(12);
+
+			Assert.Equal(nombreAttendu, resultat);
+		}
+
+		[Fact]
+		public void AfficherNombre13()
+		{
+			var convertisseur = new ConvertisseurLcd();
+			var nombreAttendu =
+				"    _ " + Environment.NewLine +
+				"  | _|" + Environment.NewLine +
+				"  | _|";
+
+			var resultat = convertisseur.ConvertirEnLcd(13);
+
+			Assert.Equal(nombreAttendu, resultat);
+		}
 	}
 }
