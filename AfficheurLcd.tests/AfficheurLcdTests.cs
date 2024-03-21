@@ -48,7 +48,6 @@ namespace AfficheurLcd.tests
 			var convertisseur = new ConvertisseurLcd();
 			var resultat = convertisseur.ConvertirEnLcd(nombre);
 
-			// Remplacer les '\n' par Environment.NewLine pour la compatibilité inter-plateformes
 			expected = expected.Replace("\n", Environment.NewLine);
 			Assert.Equal(expected, resultat);
 		}
@@ -59,6 +58,20 @@ namespace AfficheurLcd.tests
 			var convertisseur = new ConvertisseurLcd();
 			var exception = Assert.Throws<ArgumentException>(() => convertisseur.ConvertirEnLcd(-1));
 			Assert.Equal("Veuillez entrer un nombre positif.", exception.Message);
+		}
+
+		[Fact]
+		public void AfficherNombre10()
+		{
+			var convertisseur = new ConvertisseurLcd();
+			var nombreAttendu =
+				"     _ " + Environment.NewLine +
+				"  | | |" + Environment.NewLine +
+				"  | |_|";
+
+			var resultat = convertisseur.ConvertirEnLcd(10);
+
+			Assert.Equal(nombreAttendu, resultat);
 		}
 	}
 }
