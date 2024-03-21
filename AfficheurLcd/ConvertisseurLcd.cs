@@ -10,19 +10,27 @@ namespace AfficheurLcd
 	{
 		public string ConvertirEnLcd(int nombre)
 		{
-			return nombre switch
+			if (nombre < 0)
 			{
-				0 => Nombres.Zero,
-				1 => Nombres.Un,
-				2 => Nombres.Deux,
-				3 => Nombres.Trois,
-				4 => Nombres.Quatre,
-				5 => Nombres.Cinq,
-				6 => Nombres.Six,
-				7 => Nombres.Sept,
-				8 => Nombres.Huit,
-				9 => Nombres.Neuf,
-			};
+				throw new ArgumentException("Veuillez entrer un nombre positif.");
+			}
+			else
+			{
+				return nombre switch
+				{
+					0 => Nombres.Zero,
+					1 => Nombres.Un,
+					2 => Nombres.Deux,
+					3 => Nombres.Trois,
+					4 => Nombres.Quatre,
+					5 => Nombres.Cinq,
+					6 => Nombres.Six,
+					7 => Nombres.Sept,
+					8 => Nombres.Huit,
+					9 => Nombres.Neuf,
+				};
+			}
+			
 		}
 	}
 }
