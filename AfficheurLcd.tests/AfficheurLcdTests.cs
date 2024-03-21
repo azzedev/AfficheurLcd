@@ -57,5 +57,106 @@ namespace AfficheurLcd.tests
 
 			Assert.Equal(nombreAttendu, resultat);
 		}
+		[Fact]
+		public void AsciiToLcd3()
+		{
+			var convertisseur = new ConvertisseurLcd();
+			var nombreAttendu = " _ " + Environment.NewLine +
+								      " _|" + Environment.NewLine +
+								      " _|";
+
+			var resultat = convertisseur.ConvertirEnLcd(3);
+
+			Assert.Equal(nombreAttendu, resultat);
+		}
+
+		[Fact]
+		public void AsciiToLcd4()
+		{
+			var convertisseur = new ConvertisseurLcd();
+			var nombreAttendu = "   " + Environment.NewLine +
+								      "|_|" + Environment.NewLine +
+								      "  |";
+
+			var resultat = convertisseur.ConvertirEnLcd(4);
+
+			Assert.Equal(nombreAttendu, resultat);
+		}
+
+		[Fact]
+		public void AsciiToLcd5()
+		{
+			var convertisseur = new ConvertisseurLcd();
+			var nombreAttendu = " _ " + Environment.NewLine +
+								      "|_ " + Environment.NewLine +
+								      " _|";
+
+			var resultat = convertisseur.ConvertirEnLcd(5);
+
+			Assert.Equal(nombreAttendu, resultat);
+		}
+
+		[Fact]
+		public void AsciiToLcd6()
+		{
+			var convertisseur = new ConvertisseurLcd();
+			var nombreAttendu = " _ " + Environment.NewLine +
+								      "|_ " + Environment.NewLine +
+								      "|_|";
+
+			var resultat = convertisseur.ConvertirEnLcd(6);
+
+			Assert.Equal(nombreAttendu, resultat);
+		}
+
+		[Fact]
+		public void AsciiToLcd7()
+		{
+			var convertisseur = new ConvertisseurLcd();
+			var nombreAttendu = " _ " + Environment.NewLine +
+								      "  |" + Environment.NewLine +
+								      "  |";
+
+			var resultat = convertisseur.ConvertirEnLcd(7);
+
+			Assert.Equal(nombreAttendu, resultat);
+		}
+
+		[Fact]
+		public void AsciiToLcd8()
+		{
+			var convertisseur = new ConvertisseurLcd();
+			var nombreAttendu = " _ " + Environment.NewLine +
+								      "|_|" + Environment.NewLine +
+								      "|_|";
+
+			var resultat = convertisseur.ConvertirEnLcd(8);
+
+			Assert.Equal(nombreAttendu, resultat);
+		}
+
+		[Fact]
+		public void AsciiToLcd9()
+		{
+			var convertisseur = new ConvertisseurLcd();
+			var nombreAttendu = " _ " + Environment.NewLine +
+								      "|_|" + Environment.NewLine +
+								      " _|";
+
+			var resultat = convertisseur.ConvertirEnLcd(9);
+
+			Assert.Equal(nombreAttendu, resultat);
+		}
+		public void AsciiToLcd0()
+		{
+			var convertisseur = new ConvertisseurLcd();
+			var nombreAttendu = " _ " + Environment.NewLine +
+			                          "| |" + Environment.NewLine +
+			                          "|_|";
+
+			var resultat = convertisseur.ConvertirEnLcd(0);
+
+			Assert.Equal(nombreAttendu, resultat);
+		}
 	}
 }
