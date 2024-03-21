@@ -11,5 +11,16 @@ namespace AfficheurLcd.tests
 
 			Assert.Equal(expected, result);
 		}
+
+		[Fact]
+		public void AfficherNombre2()
+		{
+			var expected = " _ " + Environment.NewLine +
+			               " _|" + Environment.NewLine +
+			               "|_ ";
+			var result = Nombres.Deux;
+
+			Assert.Equal(expected, result);
+		}
 	}
 }
