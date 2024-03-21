@@ -32,5 +32,18 @@ namespace AfficheurLcd.tests
 
 			Assert.Equal(expected, result);
 		}
+
+		[Fact]
+		public void AsciiToLcd()
+		{
+			var convertisseur = new ConvertisseurLcd();
+			var nombreAttendu = "   " + Environment.NewLine +
+			                          "  |" + Environment.NewLine +
+			                          "  |";
+
+			var resultat = convertisseur.ConvertirEnLcd(1);
+
+			Assert.Equal(nombreAttendu, resultat);
+		}
 	}
 }
