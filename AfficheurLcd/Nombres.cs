@@ -8,6 +8,9 @@ namespace AfficheurLcd
 {
 	public static class Nombres
 	{
-		public static readonly string Un = "";
+		public static readonly string Un =
+			"   " + Environment.NewLine +
+			"  |" + Environment.NewLine +
+			"  |";
 	}
 }
