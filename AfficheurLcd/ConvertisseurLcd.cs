@@ -10,16 +10,11 @@ namespace AfficheurLcd
 	{
 		public string ConvertirEnLcd(int nombre)
 		{
-			if (nombre == 1)
+			return nombre switch
 			{
-				return "   " + Environment.NewLine +
-					   "  |" + Environment.NewLine +
-					   "  |";
-			}
-			else
-			{
-				return "";
-			}
+				1 => Nombres.Un,
+				2 => Nombres.Deux,
+			};
 		}
 	}
 }
