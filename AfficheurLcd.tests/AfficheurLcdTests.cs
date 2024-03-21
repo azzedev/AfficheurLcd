@@ -52,5 +52,13 @@ namespace AfficheurLcd.tests
 			expected = expected.Replace("\n", Environment.NewLine);
 			Assert.Equal(expected, resultat);
 		}
+
+		[Fact]
+		public void AsciiToLcdNegatif()
+		{
+			var convertisseur = new ConvertisseurLcd();
+			var exception = Assert.Throws<ArgumentException>(() => convertisseur.ConvertirEnLcd(-1));
+			Assert.Equal("Veuillez entrer un nombre positif.", exception.Message);
+		}
 	}
 }
