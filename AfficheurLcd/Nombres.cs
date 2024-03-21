@@ -17,6 +17,14 @@ namespace AfficheurLcd
 			" _ " + Environment.NewLine +
 			" _|" + Environment.NewLine +
 			"|_ ";
+		public static readonly string Trois = "";
+		public static readonly string Quatre = "";
+		public static readonly string Cinq = "";
+		public static readonly string Six = "";
+		public static readonly string Sept = "";
+		public static readonly string Huit = "";
+		public static readonly string Neuf = "";
+		public static readonly string Zero = "";
 
 	}
 }
